@@ -1,4 +1,4 @@
-const axios = require("axios");
+const axios = require('axios');
 
 let cryptos = [];
 
@@ -24,17 +24,18 @@ let updateCoin = (req, res, next) => {
 
 let removeCoin = (req, res, next) => {
   const { index } = req.params;
-    cryptos.splice(index, 1);
-    res.json(cryptos);  
+  cryptos.splice(index, 1);
+  res.json(cryptos);
 };
 
 let createCoin = (req, res, next) => {
-    cryptos.push(req.body);
-    res.json(cryptos);
+  cryptos.push(req.body);
+  res.json(cryptos);
 };
 
 module.exports = {
   getApiData,
   updateCoin,
-  removeCoin
+  removeCoin,
+  createCoin
 };

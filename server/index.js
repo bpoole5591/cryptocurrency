@@ -13,9 +13,8 @@ const port = 3001;
 app.get("/api/getApiData", controller.getApiData);
 app.put("/api/updateCoin/:index/:name", controller.updateCoin);
 app.delete("/api/removeCoin/:index/:name", controller.removeCoin);
-// app.post("/api/createCoin", controller.createCoin);
-
+app.post("/api/createCoin", controller.createCoin);
 
 app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+  console.log(`Listening on port ${port}`);
 });

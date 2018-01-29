@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "./App.css";
+import React, { Component } from 'react';
+import './App.css';
 // var NumberFormat = require("react-number-format");
 
 export default class Card extends Component {
@@ -9,28 +9,25 @@ export default class Card extends Component {
     this.state = {
       cryptos: this.props.cryptos,
       name: this.props.coin.name,
-      input: ""
+      input: ''
     };
   }
 
   render() {
-      return (
-       // <div>
+    return (
+      // <div>
       <div id="crypto-container">
         <span className="left">{this.props.coin.name}</span>
         <span className="right">
           <button
             onClick={() => {
-              this.props.removeCoin(
-                  this.props.index,
-                this.state.name  
-              );
+              this.props.removeCoin(this.props.index, this.state.name);
             }}
           >
-            Delete!{" "}
+            Delete!{' '}
           </button>
-            </span>
-            <span className="right">
+        </span>
+        <span className="right">
           <button
             onClick={() => {
               this.props.updateCoin(
@@ -40,9 +37,9 @@ export default class Card extends Component {
               );
             }}
           >
-            Change Name!{" "}
+            Change Name!{' '}
           </button>
-        </span>    
+        </span>
 
         <span className="right">
           <input
@@ -52,14 +49,14 @@ export default class Card extends Component {
             }}
           />
         </span>
-        </div>
-        /* <div id="crypto-container">
-            <button onClick={() => {
-                this.props.createCoin
-            }}>
-        Create Your Own!</button>        
-        </div> 
-        </div> */
+      </div>
+      // /* <div id="crypto-container">
+      //       <button onClick={() => {
+      //           this.props.createCoin
+      //       }}>
+      //   Create Your Own!</button>
+      //   </div>
+      //   </div> */
     );
   }
 }
